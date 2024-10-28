@@ -1,0 +1,75 @@
+
+.navbar {
+  background-color: #0A0A0A;
+  color: white;
+  padding: 1rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+  }
+
+  .navbar-brand {
+    height: 64px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+.custom-toggle-group {
+  border-radius: 30px; 
+  overflow: hidden; 
+  display: inline-flex;
+  border: 1px solid #3D3D3D; 
+}
+
+
+.custom-toggle-group .mat-button-toggle {
+  border-radius: 0; 
+  padding: 10px 20px;
+  background-color: transparent; 
+  color: #ffffff; 
+}
+
+.custom-toggle-group .mat-button-toggle:first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.custom-toggle-group .mat-button-toggle:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+.custom-toggle-group .mat-button-toggle-checked {
+  background-color: white; 
+  color: #0A0A0A; 
+}
+
+
+.custom-toggle-group .mat-button-toggle:not(.mat-button-toggle-checked) {
+  background-color: transparent; 
+}
+
+
+}

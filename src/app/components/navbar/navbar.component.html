@@ -1,11 +1,14 @@
 
 <nav class="navbar">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">App Name</a>
+    <img class="navbar-brand" src="assets/images/logo.png" alt="Logo">
+
     <ul class="navbar-links">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+      <mat-button-toggle-group class="custom-toggle-group" name="options" aria-label="Toggle Options" value="inicio">
+        <mat-button-toggle value="inicio">Início</mat-button-toggle>
+        <mat-button-toggle value="favoritos">Favoritos</mat-button-toggle>
+      </mat-button-toggle-group>
+      
     </ul>
   </div>
 </nav>
