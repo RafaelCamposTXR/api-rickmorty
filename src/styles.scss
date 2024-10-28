@@ -38,5 +38,10 @@ $api-rickmorty-theme: mat.define-light-theme((
   margin: 0;
 }
 
+.centered-content {
+  padding: 0 30vw; 
+}
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
