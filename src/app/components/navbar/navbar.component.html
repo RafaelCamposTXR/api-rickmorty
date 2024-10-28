@@ -4,15 +4,17 @@
     <img class="navbar-brand" src="assets/images/logo.png" alt="Logo">
 
     <ul class="navbar-links">
-      <mat-button-toggle-group class="custom-toggle-group" name="options" aria-label="Toggle Options" value="inicio">
-        
-        
-
-        <mat-button-toggle value="inicio">
+      <mat-button-toggle-group 
+        class="custom-toggle-group" 
+        name="options" 
+        aria-label="Toggle Options" 
+        value="inicio"
+      >
+        <mat-button-toggle value="inicio" routerLink="/">
           <i class="fas fa-home" style="position: relative; top: -0.2vh "></i>
           Início
         </mat-button-toggle>
-        <mat-button-toggle value="favoritos" >
+        <mat-button-toggle value="favoritos" routerLink="/favorites" >
           <i class="fas fa-heart" style="position: relative; top: -0.1vh "></i>
           Favoritos
           {{ favoriteCount }}
