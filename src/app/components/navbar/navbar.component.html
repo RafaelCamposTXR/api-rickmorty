@@ -12,9 +12,10 @@
           <i class="fas fa-home" style="position: relative; top: -0.2vh "></i>
           Início
         </mat-button-toggle>
-        <mat-button-toggle value="favoritos">
+        <mat-button-toggle value="favoritos" (click)="addFavorite()">
           <i class="fas fa-heart" style="position: relative; top: -0.1vh "></i>
           Favoritos
+          {{ favoriteCount }}
         </mat-button-toggle>
       </mat-button-toggle-group>
       

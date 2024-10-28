@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FavoriteService } from '../../favorite.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  favoriteCount: number = 0;
+
+  constructor(private favoriteService: FavoriteService) { 
+    this.favoriteService.favoriteCount$.subscribe(count => {
+    this.favoriteCount = count;
+    });
+  }
 
   ngOnInit(): void {
+    this.favoriteService.favoriteCount$.subscribe(count => {
+      this.favoriteCount = count;
+    });
+  }
+
+  addFavorite() {
+    this.favoriteService.addFavorite(); 
+  }
+
+  removeFavorite() {
+    this.favoriteService.removeFavorite(); 
   }
 
 }

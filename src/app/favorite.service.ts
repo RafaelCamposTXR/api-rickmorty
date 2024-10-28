@@ -5,17 +5,27 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class FavoriteService {
-  private favoriteCountSubject = new BehaviorSubject<number>(0);
-  favoriteCount$ = this.favoriteCountSubject.asObservable();
+  private readonly FAVORITE_KEY = 'favoriteCount'; 
+  private favoriteCountSubject: BehaviorSubject<number>;
 
-  constructor() {}
+  favoriteCount$;
+
+  constructor() {
+    const storedCount = Number(localStorage.getItem(this.FAVORITE_KEY)) || 0;
+    this.favoriteCountSubject = new BehaviorSubject<number>(storedCount);
+    this.favoriteCount$ = this.favoriteCountSubject.asObservable(); 
+  }
 
   addFavorite() {
-    this.favoriteCountSubject.next(this.favoriteCountSubject.value + 1);
+    const newCount = this.favoriteCountSubject.value + 1;
+    this.favoriteCountSubject.next(newCount);
+    localStorage.setItem(this.FAVORITE_KEY, newCount.toString()); 
   }
 
   removeFavorite() {
-    this.favoriteCountSubject.next(this.favoriteCountSubject.value > 0 ? this.favoriteCountSubject.value - 1 : 0);
+    const newCount = this.favoriteCountSubject.value > 0 ? this.favoriteCountSubject.value - 1 : 0;
+    this.favoriteCountSubject.next(newCount);
+    localStorage.setItem(this.FAVORITE_KEY, newCount.toString()); 
   }
 
   getFavoriteCount(): number {
