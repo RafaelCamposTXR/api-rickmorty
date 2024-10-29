@@ -1,0 +1,8 @@
+@import 'src/styles.scss'; 
+
+
+.home-title {
+  @include creepster;
+  font-size: 3rem;
+}
+

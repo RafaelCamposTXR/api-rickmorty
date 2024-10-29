@@ -36,12 +36,27 @@ $api-rickmorty-theme: mat.define-light-theme((
 * {
   padding: 0;
   margin: 0;
+
 }
 
 .centered-content {
-  padding: 0 25vw; 
+  padding: 10vh 25vw; 
+}
+
+@mixin creepster {
+  font-family: "Creepster", serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2.3px;
+  color: #00B5CC;
+  text-shadow: 
+    -1.8px -1.8px 0 #B2DF28, /* Sombra superior esquerda */
+     1.8px -1.8px 0 #B2DF28, /* Sombra superior direita */
+    -1.8px  1.8px 0 #B2DF28, /* Sombra inferior esquerda */
+     1.8px  1.8px 0 #B2DF28; /* Sombra inferior direita */
 }
 
 
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #1F1F1F}
