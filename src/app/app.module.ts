@@ -9,6 +9,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    FavoritesComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,

@@ -45,15 +45,31 @@ $api-rickmorty-theme: mat.define-light-theme((
 
 @mixin creepster {
   font-family: "Creepster", serif;
+  transform: scaleY(1.2);
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 2.3px;
+  letter-spacing: 2.8px;
   color: #00B5CC;
   text-shadow: 
-    -1.8px -1.8px 0 #B2DF28, /* Sombra superior esquerda */
-     1.8px -1.8px 0 #B2DF28, /* Sombra superior direita */
-    -1.8px  1.8px 0 #B2DF28, /* Sombra inferior esquerda */
-     1.8px  1.8px 0 #B2DF28; /* Sombra inferior direita */
+    -2px -2px 0 #B2DF28, // Sombra superior esquerda 
+     2px -2px 0 #B2DF28, // Sombra superior direita 
+    -2px  2px 0 #B2DF28, // Sombra inferior esquerda 
+     2px  2px 0 #B2DF28; // Sombra inferior direita 
+}
+
+@mixin creepster-title {
+  font-size: 2.8rem;
+  font-family: "Creepster", serif;
+  transform: scaleY(1.2);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2.8px;
+  color: #00B5CC;
+  text-shadow: 
+    -1.6px -1.6px 0 #B2DF28, // Sombra superior esquerda 
+     1.6px -1.6px 0 #B2DF28, // Sombra superior direita 
+    -1.6px  1.6px 0 #B2DF28, // Sombra inferior esquerda 
+     1.6px  1.6px 0 #B2DF28; // Sombra inferior direita 
 }
 
 
