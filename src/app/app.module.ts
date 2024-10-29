@@ -11,7 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
-import { FormsModule } from '@angular/forms'; // Importar FormsModule
+import { FormsModule } from '@angular/forms';
+import { CharacterCardComponent } from './components/character-card/character-card.component'; // Importar FormsModule
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms'; // Importar FormsModule
     AboutComponent,
     NavbarComponent,
     FavoritesComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,

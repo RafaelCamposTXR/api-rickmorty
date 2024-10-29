@@ -48,13 +48,7 @@ $api-rickmorty-theme: mat.define-light-theme((
   transform: scaleY(1.2);
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 2.8px;
-  color: #00B5CC;
-  text-shadow: 
-    -2px -2px 0 #B2DF28, // Sombra superior esquerda 
-     2px -2px 0 #B2DF28, // Sombra superior direita 
-    -2px  2px 0 #B2DF28, // Sombra inferior esquerda 
-     2px  2px 0 #B2DF28; // Sombra inferior direita 
+  letter-spacing: 0.4px;
 }
 
 @mixin creepster-title {
