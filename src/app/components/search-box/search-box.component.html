@@ -1,1 +1,16 @@
-<p>search-box works!</p>
+<div class="search-box">
+  <input 
+    type="text" 
+    id="search-input" 
+    class="search-input" 
+    [(ngModel)]="searchTerm" 
+    (focus)="isFocused = true" 
+    (blur)="isFocused = false"
+    autocomplete="off"
+    placeholder="" required
+  />
+  <label for="search-input" class="search-label" [class.shrink]="isFocused || searchTerm.length > 0">
+    Pesquisar
+  </label>
+  
+</div>

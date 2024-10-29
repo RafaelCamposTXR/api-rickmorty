@@ -40,7 +40,7 @@ $api-rickmorty-theme: mat.define-light-theme((
 }
 
 .centered-content {
-  padding: 10vh 25vw; 
+  padding: 7vh 25vw; 
 }
 
 @mixin creepster {
@@ -70,6 +70,10 @@ $api-rickmorty-theme: mat.define-light-theme((
      1.6px -1.6px 0 #B2DF28, // Sombra superior direita 
     -1.6px  1.6px 0 #B2DF28, // Sombra inferior esquerda 
      1.6px  1.6px 0 #B2DF28; // Sombra inferior direita 
+}
+
+:root {
+  --background: #1f1f1f;
 }
 
 

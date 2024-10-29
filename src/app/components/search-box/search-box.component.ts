@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBoxComponent implements OnInit {
 
+  searchTerm: string = '';
+  isFocused: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

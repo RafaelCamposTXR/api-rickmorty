@@ -41,7 +41,7 @@
 
 .custom-toggle-group {
   display: flex;
-  border-radius: 30px; 
+  border-radius: 15px; 
   overflow: hidden; 
   display: inline-flex;
   border: 1px solid #3D3D3D; 
@@ -64,16 +64,12 @@
 
 .custom-toggle-group .mat-button-toggle:first-child {
   display: flex;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
   flex-grow:1;
   gap: 20vw;
 }
 
 .custom-toggle-group .mat-button-toggle:last-child {
-  display: flex;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  display: flex;  
   flex-grow:1;
   gap: 2vw;
 }

@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

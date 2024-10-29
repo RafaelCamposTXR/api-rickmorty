@@ -1,7 +1,16 @@
 @import 'src/styles.scss'; 
 
+.home-superior {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .home-title {
   @include creepster-title;
+  position: relative;
+  top: -0.05vh;
 }
 
