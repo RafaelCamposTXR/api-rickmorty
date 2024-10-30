@@ -1,10 +1,15 @@
 <div class="character-card">
-  <div class="favorite-icon">
+  <div class="favorite-icon" *ngIf="isFavorite"> 
     <i class="fas fa-heart"></i>
   </div>
-  <img class="character-image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez">
+  <div class="non-favorite-icon" *ngIf="!isFavorite"> 
+    <i class="fa-regular fa-heart"></i>
+  </div>
+  <img class="character-image" [src]="characterImage" [alt]="characterName">
   <div class="character-info">
-    <h2 class="character-name">Rick Sanchez</h2>
-    <p class="character-subtitle">Teste</p>
+    <div class="character-title"> 
+      <h2 class="character-name">{{ characterName }}</h2>
+      <p class="character-subtitle">{{ characterSubtitle }}</p>
+    </div>
   </div>
 </div>

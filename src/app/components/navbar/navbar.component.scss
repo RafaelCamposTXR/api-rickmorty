@@ -1,13 +1,18 @@
 
 .navbar {
   display: flex;
-  
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000;
   align-items: center;
   justify-content: space-between;
   background-color: #0A0A0A;
   color: white;
-  height: 64px;
-  padding: 0 1.6vw;
+  height: 9.2vh;
+  padding: 0 1.7vw;
+  box-sizing: border-box;
 
   // .container {
   //   display: flex;
@@ -17,9 +22,7 @@
   // }
 
   .navbar-brand {
-    height: 64px;
-    gap: 0px;
-    opacity: 0px;
+    height: 9.2vh;
   }
 
   .navbar-links {
@@ -46,8 +49,8 @@
   overflow: hidden; 
   display: inline-flex;
   border: 1px solid #3D3D3D; 
-  width: 253px;
-  height: 40px;
+  width: 20vw;
+  height: 5.3vh;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -98,5 +101,5 @@
 }
 
 .favorites-count {
-  width: 5px;
+  width: 2vw;
 }
