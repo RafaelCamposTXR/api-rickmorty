@@ -1,6 +1,7 @@
 
 .navbar {
   display: flex;
+  
   align-items: center;
   justify-content: space-between;
   background-color: #0A0A0A;
@@ -90,4 +91,12 @@
 }
 
 
+}
+
+.favorites-container {
+  display: flex;
+}
+
+.favorites-count {
+  width: 5px;
 }

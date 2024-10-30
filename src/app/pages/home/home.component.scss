@@ -2,7 +2,6 @@
 
 .home-superior {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin: 0 0 5vh 0;
@@ -12,6 +11,10 @@
 .home-title {
   @include creepster-title;
   position: relative;
-  top: -0.05vh;
 }
 
+.character-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}

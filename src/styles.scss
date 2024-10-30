@@ -28,9 +28,7 @@ $api-rickmorty-theme: mat.define-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+
 @include mat.all-component-themes($api-rickmorty-theme);
 
 * {
@@ -39,9 +37,7 @@ $api-rickmorty-theme: mat.define-light-theme((
 
 }
 
-.centered-content {
-  padding: 7vh 25vw; 
-}
+
 
 @mixin creepster {
   font-family: "Creepster", serif;
@@ -52,7 +48,7 @@ $api-rickmorty-theme: mat.define-light-theme((
 }
 
 @mixin creepster-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-family: "Creepster", serif;
   transform: scaleY(1.2);
   font-style: normal;
