@@ -12,7 +12,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
-import { CharacterCardComponent } from './components/character-card/character-card.component'; // Importar FormsModule
+import { CharacterCardComponent } from './components/character-card/character-card.component';
+import { CharacterMenuComponent } from './components/character-menu/character-menu.component'; // Importar FormsModule
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CharacterCardComponent } from './components/character-card/character-ca
     NavbarComponent,
     FavoritesComponent,
     SearchBoxComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
+    CharacterMenuComponent
   ],
   imports: [
     BrowserModule,

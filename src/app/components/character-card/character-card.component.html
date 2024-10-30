@@ -1,15 +1,16 @@
+<!-- character-card.component.html -->
 <div class="character-card">
-  <div class="favorite-icon" *ngIf="isFavorite"> 
-    <i class="fas fa-heart"></i>
-  </div>
-  <div class="non-favorite-icon" *ngIf="!isFavorite"> 
-    <i class="fa-regular fa-heart"></i>
-  </div>
-  <img class="character-image" [src]="characterImage" [alt]="characterName">
-  <div class="character-info">
-    <div class="character-title"> 
-      <h2 class="character-name">{{ characterName }}</h2>
-      <p class="character-subtitle">{{ characterSubtitle }}</p>
+  <button 
+    class="character-card__icon" 
+    [ngClass]="{'character-card__icon--favorite': isFavorite, 'character-card__icon--non-favorite': !isFavorite}" 
+    >
+    <i [ngClass]="isFavorite ? 'fas fa-heart' : 'fa-regular fa-heart'"></i>
+  </button>
+  <img class="character-card__image" [src]="characterImage" [alt]="characterName">
+  <div class="character-card__info">
+    <div class="character-card__title"> 
+      <h2 class="character-card__name">{{ characterName }}</h2>
+      <p class="character-card__subtitle">{{ characterSubtitle }}</p>
     </div>
   </div>
 </div>
