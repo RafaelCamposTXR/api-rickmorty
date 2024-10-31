@@ -12,6 +12,7 @@
   aspect-ratio: 2 / 2.9;
 
   @mixin icon-style($background-color, $icon-color) {
+    cursor: pointer;
     display: flex;
     justify-content: start;
     align-items: end;

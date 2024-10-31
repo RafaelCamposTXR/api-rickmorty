@@ -54,16 +54,19 @@ $api-rickmorty-theme: mat.define-light-theme((
   font-style: normal;
   font-weight: 400;
   letter-spacing: 2.8px;
-  color: #00B5CC;
+  color: var(--rickandmorty-blue);
   text-shadow: 
-    -1.6px -1.6px 0 #B2DF28, // Sombra superior esquerda 
-     1.6px -1.6px 0 #B2DF28, // Sombra superior direita 
-    -1.6px  1.6px 0 #B2DF28, // Sombra inferior esquerda 
-     1.6px  1.6px 0 #B2DF28; // Sombra inferior direita 
+    -1.6px -1.6px 0 var(--rickandmorty-green), // Sombra superior esquerda 
+     1.6px -1.6px 0 var(--rickandmorty-green), // Sombra superior direita 
+    -1.6px  1.6px 0 var(--rickandmorty-green), // Sombra inferior esquerda 
+     1.6px  1.6px 0 var(--rickandmorty-green); // Sombra inferior direita 
 }
 
 :root {
   --background: #1f1f1f;
+  --rickandmorty-black: #0a0a0a;
+  --rickandmorty-blue: #00b5cc;
+  --rickandmorty-green: #B2DF28
 }
 
 

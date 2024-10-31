@@ -27,22 +27,28 @@
   margin: 1.5vh 0;
   font-size: 1.2vw; 
 
+  .pagination-number {
+    @include creepster-title;
+    font-size: 2rem;
+  }
+
   button {
-    background-color: #007bff; 
+    background-color: var(--rickandmorty-green); 
+    height: 8vh;
     color: white; 
     border: none; 
-    border-radius: 5px; 
+    border-radius: 15px; 
     padding: 0.5vh 1vw;
     margin: 0 0.5vw; 
     cursor: pointer; 
     transition: background-color 0.3s; 
 
     &:hover {
-      background-color: #0056b3;
+      background-color: var(--rickandmorty-blue);
     }
 
     &:disabled {
-      background-color: #c0c0c0; 
+      background-color: var(--rickandmorty-black); 
       cursor: not-allowed; 
     }
   }
