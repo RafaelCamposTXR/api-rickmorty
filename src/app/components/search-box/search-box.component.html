@@ -4,6 +4,7 @@
     id="search-input" 
     class="search-input" 
     [(ngModel)]="searchTerm" 
+    (input)="onSearchChange(searchTerm)"
     (focus)="isFocused = true" 
     (blur)="isFocused = false"
     autocomplete="off"

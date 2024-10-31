@@ -12,15 +12,16 @@ export class HomeComponent implements OnInit {
   characters: any[] = [];
   currentPage: number = 1; 
   totalPages: number = 0; 
+  searchTerm: string = '';
 
   constructor(private characterService: CharacterService, private store: Store) {}
 
   ngOnInit(): void {
-    this.loadCharacters(this.currentPage); 
+    this.loadCharacters(this.currentPage, this.searchTerm); 
   }
 
-  loadCharacters(page: number): void {
-    this.characterService.getCharacters(page).subscribe(
+  loadCharacters(page: number, searchTerm: string): void {
+    this.characterService.getCharacters(page, searchTerm).subscribe(
       data => {
         this.characters = data.results;
         this.totalPages = data.info.pages; 
@@ -33,22 +34,28 @@ export class HomeComponent implements OnInit {
   nextPage(): void {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
-      this.loadCharacters(this.currentPage); 
+      this.loadCharacters(this.currentPage, this.searchTerm); 
     }
   }
 
   previousPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
-      this.loadCharacters(this.currentPage); 
+      this.loadCharacters(this.currentPage, this.searchTerm); 
     }
   }
 
   goToFirstPage(): void {
     if (this.currentPage !== 1) {  
       this.currentPage = 1;
-      this.loadCharacters(this.currentPage); 
+      this.loadCharacters(this.currentPage, this.searchTerm);
     }
+  }
+
+  onSearch(term: string): void {
+    this.searchTerm = term; 
+    this.currentPage = 1; 
+    this.loadCharacters(this.currentPage, this.searchTerm); 
   }
 
   isFavorite(characterId: number): boolean {

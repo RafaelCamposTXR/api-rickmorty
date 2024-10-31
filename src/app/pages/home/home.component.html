@@ -1,6 +1,6 @@
 <div class="home-superior">
   <div class="home-title"> Início </div>
-  <app-search-box style="margin: 0; padding: 0"></app-search-box>
+  <app-search-box (searchTermChanged)="onSearch($event)" style="margin: 0; padding: 0"></app-search-box>
 </div>
 
 <div class="character-container">
