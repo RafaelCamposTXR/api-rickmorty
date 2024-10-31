@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CharacterService } from '../../services/character.service'; 
-import { Store } from '@ngxs/store';
-import { FavoritesState } from '../../store/favorites.state';
+import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
+import { FavoritesState, AddFavorite, RemoveFavorite, Character } from '../../store/favorites.state';
 
 @Component({
   selector: 'app-favorites',
@@ -10,31 +9,39 @@ import { Observable } from 'rxjs';
   styleUrls: ['./favorites.component.scss']
 })
 export class FavoritesComponent implements OnInit {
-  characters: any[] = [];
+  // Usando o Select decorator, isso será um Observable de favorites
+  @Select(FavoritesState.getFavorites) favorites$!: Observable<Character[]>;
 
-  constructor(private characterService: CharacterService, private store: Store) {}
+  constructor(private store: Store) {}
 
   ngOnInit(): void {
-    this.loadFavoriteCharacters(); 
+    // Inscreve-se para obter os favoritos e logar
+    this.favorites$.subscribe(favorites => {
+      console.log('Favoritos carregados:', favorites);
+    });
   }
 
-  loadFavoriteCharacters(): void {
-    const favorites = this.store.selectSnapshot(FavoritesState.getFavorites) || []; 
-  
-    this.characterService.getAllCharacters().subscribe(
-      characters => {  
-        this.characters = characters.filter(character => favorites.includes(character.id));
-  
-        console.log('Personagens favoritos:', this.characters);
-  
-        const favoriteIds = characters.map(character => character.id);
-        console.log('IDs de personagens favoritos disponíveis:', favoriteIds);
-      },
-      error => console.error('Erro ao buscar personagens:', error)
-    );
+  toggleFavorite(characterId: number): void {
+    const characterData = this.store.selectSnapshot(FavoritesState.getFavorites).find(character => character.id === characterId);
+
+    if (characterData) {
+      this.store.dispatch(new RemoveFavorite(characterId));
+      console.log(`Removed from favorites: ${characterId}`);
+    } else {
+      const newCharacter: Character = {
+        id: characterId,
+        name: 'Character Name',
+        species: 'Character Species',
+        type: 'Character Type',
+        image: 'Character Image URL'
+      };
+      this.store.dispatch(new AddFavorite(newCharacter));
+      console.log(`Added to favorites: ${characterId}`);
+    }
+
+    // O estado de favoritos é agora atualizado automaticamente pelo Select
+    this.store.select(FavoritesState.getFavorites).subscribe(favorites => {
+      console.log('Current favorites:', favorites);
+    });
   }
-  
-
-
-
 }

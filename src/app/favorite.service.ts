@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+export interface Character {
+  id: number;
+  name: string;
+  species: string;
+  type: string;
+  image: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class FavoriteService {
   private readonly FAVORITE_KEY = 'favoriteCount'; 
   private favoriteCountSubject: BehaviorSubject<number>;
-
   favoriteCount$;
 
   constructor() {

@@ -1,3 +1,16 @@
-<div class="favorites-title">
-  Favoritos
+<div class="favorites-superior">
+  <div class="favorites-title"> Favoritos </div>
+</div>
+
+<div class="character-container">
+  <app-character-card 
+    *ngFor="let character of favorites$ | async" 
+    [characterId]="character.id"
+    [characterName]="character.name" 
+    [characterSubtitle]="character.species" 
+    [characterType]="character.type" 
+    [characterImage]="character.image" 
+    [isFavorite]="true"  
+    (toggleFavorite)="toggleFavorite(character.id)">
+  </app-character-card>
 </div>

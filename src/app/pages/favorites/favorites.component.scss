@@ -1,6 +1,18 @@
 @import 'src/styles.scss'; 
 
+.favorites-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh 0 7.4vh 0;
+}
 
 .favorites-title {
   @include creepster-title;
+}
+
+.character-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
 }

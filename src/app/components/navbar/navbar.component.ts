@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FavoriteService } from '../../favorite.service';
+import { Store, Select } from '@ngxs/store';
+import { Observable } from 'rxjs';
+import { FavoritesState, Character } from '../../store/favorites.state';
 
 @Component({
   selector: 'app-navbar',
@@ -7,27 +9,19 @@ import { FavoriteService } from '../../favorite.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  // Usando @Select para obter a lista de favoritos como um Observable
+  @Select(FavoritesState.getFavorites) favorites$!: Observable<Character[]>;
 
   favoriteCount: number = 0;
 
-  constructor(private favoriteService: FavoriteService) { 
-    this.favoriteService.favoriteCount$.subscribe(count => {
-    this.favoriteCount = count;
-    });
-  }
+  constructor(private store: Store) {}
 
   ngOnInit(): void {
-    this.favoriteService.favoriteCount$.subscribe(count => {
-      this.favoriteCount = count;
+    // Inscreve-se no Observable para contar favoritos
+    this.favorites$.subscribe(favorites => {
+      this.favoriteCount = favorites.length;
     });
   }
 
-  addFavorite() {
-    this.favoriteService.addFavorite(); 
-  }
-
-  removeFavorite() {
-    this.favoriteService.removeFavorite(); 
-  }
 
 }

@@ -47,6 +47,7 @@ export class HomeComponent implements OnInit {
 
   isFavorite(characterId: number): boolean {
     const favorites = this.store.selectSnapshot(FavoritesState.getFavorites) || []; 
-    return favorites.includes(characterId);
+    return favorites.some(character => character.id === characterId);
   }
+  
 }

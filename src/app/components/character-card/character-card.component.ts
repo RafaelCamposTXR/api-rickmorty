@@ -17,18 +17,26 @@ export class CharacterCardComponent implements OnInit {
   }
 
   toggleFavorite(): void {
+    const characterData = {
+      id: this.characterId,
+      name: this.characterName,
+      species: this.characterSubtitle,
+      type: this.characterType,
+      image: this.characterImage
+    };
+  
     if (this.isFavorite) {
       this.store.dispatch(new RemoveFavorite(this.characterId));
       console.log(`Removed from favorites: ${this.characterId}`);
     } else {
-      this.store.dispatch(new AddFavorite(this.characterId));
+      this.store.dispatch(new AddFavorite(characterData)); // Armazenando o objeto com os dados do personagem
       console.log(`Added to favorites: ${this.characterId}`);
     }
-
-
+  
     const favorites = this.store.selectSnapshot(FavoritesState.getFavorites);
     console.log('Current favorites:', favorites);
   }
+  
 
   @Input() characterId!: number;
   @Input() characterName!: string; 
