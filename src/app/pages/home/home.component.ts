@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CharacterService } from '../../services/character.service'; 
+import { Store } from '@ngxs/store';
+import { FavoritesState } from '../../store/favorites.state';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -6,23 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  characters: any[] = [];
 
-  constructor() { }
+  constructor(private characterService: CharacterService, private store: Store) {}
 
   ngOnInit(): void {
+    this.characterService.getCharacters().subscribe(
+      data => {
+        this.characters = data.results;
+        console.log('Personagens recebidos:', this.characters); 
+      },
+      error => console.error('Erro ao buscar personagens:', error) 
+    );
   }
 
-  characters = [
-    { id: 1, name: 'Rick Sanchez', gender: 'Human', image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg' },
-    { id: 2, name: 'Rick Sanchez', gender: 'Human', image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg' },
-    { id: 3, name: 'Rick Sanchez', gender: 'Human', image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg' },
-    { id: 4, name: 'Rick Sanchez', gender: 'Human', image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg' },
-  ];
 
-  favoriteCharacterIds = [1]; 
-
-  isCharacterFavorite(id: number): boolean {
-    return this.favoriteCharacterIds.includes(id);
+  isFavorite(characterId: number): boolean {
+    const favorites = this.store.selectSnapshot(FavoritesState.getFavorites) || []; 
+    return favorites.includes(characterId);
   }
-
+  
 }

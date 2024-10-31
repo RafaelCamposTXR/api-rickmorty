@@ -61,10 +61,12 @@
   }
 
   .character-card__info {
+    position: relative;
     flex-grow: 1;
     display: flex;
+    width:100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
     background-color: black;
     color: white;
@@ -72,21 +74,35 @@
     text-align: center;
 
     .character-card__title {
+      height: 100%;
+      width: 100%;
       display: flex;
+      box-sizing: border-box;
       flex-direction: column;
+      justify-content: start;
       align-items: start;
-      gap: 0.1vw;
+      gap: 0.4vw;
     }
 
     .character-card__name {
-      font-size: 1.7vw;
+      display: flex;
+      max-height: 3.5vh;
+      width: 90%;
+      font-size: 1.5vw;
       margin: 0;
+      white-space: nowrap; 
+      text-overflow: ellipsis;
       @include creepster;
-      height: 4vh;
+      overflow: hidden;
+      flex-wrap: nowrap;
+      text-align: start;
+      text-overflow: ellipsis;
     }
 
     .character-card__subtitle {
+      height: 2vh;
       font-size: 1.1vw;
+      text-align: start;
       font-weight: 300 !important;
       margin: 0;
     }

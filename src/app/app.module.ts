@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxsModule } from '@ngxs/store';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +15,8 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
-import { CharacterMenuComponent } from './components/character-menu/character-menu.component'; // Importar FormsModule
-
+import { CharacterMenuComponent } from './components/character-menu/character-menu.component'; 
+import { CharacterService } from './services/character.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,10 @@ import { CharacterMenuComponent } from './components/character-menu/character-me
     BrowserAnimationsModule,
     MatButtonToggleModule,
     FormsModule,
+    HttpClientModule,
     NgxsModule.forRoot([]),
   ],
-  providers: [],
+  providers: [CharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
