@@ -35,11 +35,13 @@
 
   .character-card__icon--favorite {
     @include icon-style(#fff, #0a0a0a);
+    transition: background-color 0.3s ease, color 0.3s ease; 
   }
-
+  
   .character-card__icon--non-favorite {
     @include icon-style(#0a0a0a1c, rgb(249, 249, 249));
-
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  
     &::before {
       content: '';
       position: absolute;
@@ -51,8 +53,10 @@
       border-radius: 100%;
       filter: blur(2px);
       z-index: 0;
+      transition: opacity 0.3s ease; 
     }
   }
+  
 
   .character-card__image {
     width: 100%;

@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { CharacterMenuComponent } from './components/character-menu/character-menu.component'; 
 import { CharacterService } from './services/character.service';
+import { FavoritesState } from './store/favorites.state'; 
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { CharacterService } from './services/character.service';
     MatButtonToggleModule,
     FormsModule,
     HttpClientModule,
-    NgxsModule.forRoot([]),
+    NgxsModule.forRoot([FavoritesState]),
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
