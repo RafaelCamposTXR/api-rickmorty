@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../../services/character.service'; 
 import { Store } from '@ngxs/store';
 import { FavoritesState } from '../../store/favorites.state';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -45,9 +44,15 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  goToFirstPage(): void {
+    if (this.currentPage !== 1) {  
+      this.currentPage = 1;
+      this.loadCharacters(this.currentPage); 
+    }
+  }
+
   isFavorite(characterId: number): boolean {
     const favorites = this.store.selectSnapshot(FavoritesState.getFavorites) || []; 
     return favorites.some(character => character.id === characterId);
   }
-  
 }

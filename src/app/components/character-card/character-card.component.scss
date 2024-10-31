@@ -32,6 +32,14 @@
       color: $icon-color;
       font-size: 17px;
     }
+
+    &:hover {
+      transform: scale(1.05);
+
+      i {
+        transform: scale(1.1);
+      }
+    }
   }
 
   .character-card__icon--favorite {
@@ -105,7 +113,7 @@
     }
 
     .character-card__subtitle {
-      height: 2vh;
+      height: 0.8vw;
       font-size: 1.1vw;
       text-align: start;
       font-weight: 300 !important;

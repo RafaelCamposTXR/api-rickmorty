@@ -17,7 +17,7 @@
 
  <!-- Área de paginação -->
 <div class="pagination-controls">
-  <button (click)="previousPage()" [disabled]="currentPage === 1"> < </button>
+  <button (click)="previousPage()" [disabled]="currentPage === 1"> <i class="fa-solid fa-arrow-left"></i> </button>
   <span class="pagination-number">{{ currentPage }} / {{ totalPages }}</span>
-  <button (click)="nextPage()" [disabled]="currentPage === totalPages"> > </button>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages"> <i class="fa-solid fa-arrow-right"></i> </button>
 </div>

@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 0 5vh 0;
+
 }
 
 
@@ -15,9 +16,10 @@
 
 .character-container {
   display: flex;
-  gap: 24px;
+  justify-content: start;
+  gap: 1.7vw;
   flex-wrap: wrap;
-  padding: 0 0 5vh 0;
+  padding: 5vh 0;
 }
 
 .pagination-controls {
@@ -30,30 +32,46 @@
   .pagination-number {
     @include creepster-title;
     font-size: 2rem;
+    cursor: default;
   }
 
   button {
     background-color: var(--rickandmorty-green); 
-    height: 8vh;
+    height: 7vh;
     color: white; 
     border: none; 
     border-radius: 15px; 
     padding: 0.5vh 1vw;
     margin: 0 0.5vw; 
     cursor: pointer; 
-    transition: background-color 0.3s; 
+    transition: transform 0.1s; 
 
     &:hover {
-      background-color: var(--rickandmorty-blue);
+      transform: scale(1.1);
+
+      i {
+        transform: scale(1.2);
+      }
     }
 
     &:disabled {
       background-color: var(--rickandmorty-black); 
       cursor: not-allowed; 
+
+      i {
+        color: white;
+      }
     }
   }
 
   span {
     margin: 0 1vw; 
   }
+
+  i {
+    color: var(--rickandmorty-blue);
+    transition: transform 0.2s ease;
+  }
+
 }
+

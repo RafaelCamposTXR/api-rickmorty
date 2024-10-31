@@ -15,7 +15,6 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
-import { CharacterMenuComponent } from './components/character-menu/character-menu.component'; 
 import { CharacterService } from './services/character.service';
 import { FavoritesState } from './store/favorites.state'; 
 
@@ -29,7 +28,6 @@ import { FavoritesState } from './store/favorites.state';
     FavoritesComponent,
     SearchBoxComponent,
     CharacterCardComponent,
-    CharacterMenuComponent
   ],
   imports: [
     BrowserModule,
