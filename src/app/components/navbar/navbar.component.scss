@@ -64,28 +64,31 @@
   background-color: transparent; 
   color: #A4A4A4; 
   align-items: center;
+  justify-content: start;
 }
 
 .custom-toggle-group .mat-button-toggle:first-child {
   display: flex;
   flex-grow:1;
-  gap: 20vw;
 }
 
 .custom-toggle-group .mat-button-toggle:last-child {
   display: flex;  
   flex-grow:1;
-  gap: 2vw;
 }
-
-
-
-
 
 
 .custom-toggle-group .mat-button-toggle-checked {
   background-color: white; 
   color: #0A0A0A; 
+
+  .favorite-count {
+    width: 1.7vw; 
+    height: 1.7vw; 
+    border-radius: 50%; 
+    background-color: var(--rickandmorty-black);
+    color: #fff; 
+  }
 }
 
 
@@ -93,13 +96,32 @@
   background-color: transparent; 
 }
 
-
-}
-
-.favorites-container {
+.toggle-content {
   display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.4vw;
+  width: 100%;
 }
 
-.favorites-count {
-  width: 2vw;
+.favorite-container {
+  position: relative; 
+  display: inline-block;
 }
+
+.favorite-count {
+  width: 1.3vw; 
+  height: 1.3vw; 
+  border-radius: 50%; 
+  background-color: rgb(255, 255, 255);
+  color: var(--rickandmorty-black); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 12px; 
+  font-weight: bold; 
+  border: 2px solid white;
+}
+
+}
+

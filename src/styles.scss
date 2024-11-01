@@ -62,6 +62,14 @@ $api-rickmorty-theme: mat.define-light-theme((
      1.6px  1.6px 0 var(--rickandmorty-green); // Sombra inferior direita 
 }
 
+.character-container {
+  display: flex;
+  justify-content: start;
+  gap: 1.7vw;
+  flex-wrap: wrap;
+  padding: 5vh 0;
+}
+
 :root {
   --background: #1f1f1f;
   --rickandmorty-black: #0a0a0a;

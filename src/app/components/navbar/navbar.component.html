@@ -14,9 +14,15 @@
           Início
         </mat-button-toggle>
         <mat-button-toggle value="favoritos" routerLink="/favorites" >
-          <i class="fas fa-heart" style="position: relative; top: -0.1vh "></i>
-          Favoritos
-          {{ favoriteCount }}
+          <div class="toggle-content">
+            <i class="fas fa-heart" style="position: relative; top: 0.1vh; left: -0.1vw "></i>
+            Favoritos
+            <div class="favorite-count">
+
+                {{ favoriteCount }}
+
+            </div>
+          </div>
         </mat-button-toggle>
       </mat-button-toggle-group>
       

@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 0 5vh 0;
-
+  height: 8vh;
 }
 
 
@@ -14,13 +14,7 @@
   position: relative;
 }
 
-.character-container {
-  display: flex;
-  justify-content: start;
-  gap: 1.7vw;
-  flex-wrap: wrap;
-  padding: 5vh 0;
-}
+
 
 .pagination-controls {
   display: flex;
