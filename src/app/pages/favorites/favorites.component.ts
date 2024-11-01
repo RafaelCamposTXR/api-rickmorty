@@ -9,13 +9,13 @@ import { FavoritesState, AddFavorite, RemoveFavorite, Character } from '../../st
   styleUrls: ['./favorites.component.scss']
 })
 export class FavoritesComponent implements OnInit {
-  // Usando o Select decorator, isso será um Observable de favorites
+
   @Select(FavoritesState.getFavorites) favorites$!: Observable<Character[]>;
 
   constructor(private store: Store) {}
 
   ngOnInit(): void {
-    // Inscreve-se para obter os favoritos e logar
+    window.scrollTo(0, 0);
     this.favorites$.subscribe(favorites => {
       console.log('Favoritos carregados:', favorites);
     });
@@ -39,7 +39,7 @@ export class FavoritesComponent implements OnInit {
       console.log(`Added to favorites: ${characterId}`);
     }
 
-    // O estado de favoritos é agora atualizado automaticamente pelo Select
+
     this.store.select(FavoritesState.getFavorites).subscribe(favorites => {
       console.log('Current favorites:', favorites);
     });

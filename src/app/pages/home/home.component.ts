@@ -52,6 +52,13 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  goToLastPage(): void {
+    if (this.currentPage !== this.totalPages) {  
+      this.currentPage = this.totalPages;
+      this.loadCharacters(this.currentPage, this.searchTerm);
+    }
+  }
+
   onSearch(term: string): void {
     this.searchTerm = term; 
     this.currentPage = 1; 
