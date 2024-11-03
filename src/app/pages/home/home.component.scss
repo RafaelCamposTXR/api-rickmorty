@@ -70,3 +70,30 @@
 
 }
 
+@media only screen and (max-width: 768px) {
+  .home-superior {
+    margin: 10vh 0 0 0;
+    display: block;
+  }
+
+  .home-title {
+    width: 4vw;
+  }
+
+  .character-container {
+    width: 100%;
+  }
+
+  .pagination-controls {
+
+  }
+
+  .pagination-controls button {
+
+  }
+
+  .pagination-number {
+
+  }
+}
+

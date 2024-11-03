@@ -10,3 +10,15 @@
 
 }
 
+@media only screen and (max-width: 768px) {
+
+  .centered-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .centered-content {
+    width: 70vw;
+  
+  }
+}
