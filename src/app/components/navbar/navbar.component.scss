@@ -9,9 +9,9 @@
   justify-content: space-between;
   background-color: #0A0A0A;
   color: white;
-  height: 9.2vh;
-  padding: 0 1.7vw;
-  box-sizing: border-box;
+  height: 5vw;
+  padding: 1vh 1.7vw;
+  
 
 
 
@@ -26,9 +26,9 @@
     display: inline-flex;
     border: 1px solid #3D3D3D; 
     width: 20vw;
-    height: 5.3vh;
+    height: 3vw;
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
+    font-size: 1.15vw;
     font-weight: 500;
     font-style: normal;
   }
@@ -44,11 +44,13 @@
 
   .custom-toggle-group .mat-button-toggle:first-child {
     display: flex;
+    align-items: center;
     flex-grow:1;
   }
 
   .custom-toggle-group .mat-button-toggle:last-child {
     display: flex;  
+    align-items: center;
     flex-grow:1;
   }
 
@@ -106,6 +108,8 @@
   gap: 1rem;
 }
 
+
+
 @media (max-width: 768px) {
 
 
@@ -116,6 +120,22 @@
     .navbar-brand {
       width: 30vw;
       height: auto;
+    }
+
+    .custom-toggle-group {
+      width: 90vw; 
+      height: 6vh;
+      font-size: 1rem;
+    }
+  
+    .custom-toggle-group .mat-button-toggle {
+      justify-content: center; 
+    }
+
+    .favorite-count {
+      width: 4vw;
+      height: 4vw;
+      margin: 0 1vw;
     }
   }
 
@@ -141,34 +161,12 @@
 
   .navbar-links.open {
     display: flex;
+    padding: 2vh 0;
+    justify-content: center;
   }
 
 
-  .navbar-links li {
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-  }
+  
 
-  .navbar-links li a {
-    display: block;
-    padding: 10px;
-    width: 100%;
-  }
-
-
-  .custom-toggle-group {
-    width: 90vw; 
-    height: 6vh;
-  }
-
-  .custom-toggle-group .mat-button-toggle {
-    justify-content: center; 
-  }
-
-  .favorite-count {
-    width: 4vw;
-    height: 4vw;
-    font-size: 10px;
-  }
+  
 }
