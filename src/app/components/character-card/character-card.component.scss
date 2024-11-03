@@ -121,3 +121,58 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .character-card {
+    width: 30vw;
+  
+    @mixin icon-style($background-color, $icon-color) {
+
+  
+      i {
+
+      }
+  
+      &:hover {
+
+  
+        i {
+
+        }
+      }
+    }
+  
+    .character-card__icon--favorite {
+
+    }
+    
+    .character-card__icon--non-favorite {
+
+    
+      &::before {
+
+      }
+    }
+    
+  
+    .character-card__image {
+
+    }
+  
+    .character-card__info {
+
+  
+      .character-card__title {
+
+      }
+  
+      .character-card__name {
+        font-size: 1rem;
+      }
+  
+      .character-card__subtitle {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

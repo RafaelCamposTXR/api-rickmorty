@@ -1,31 +1,31 @@
-
 <nav class="navbar">
-    <img class="navbar-brand" src="assets/images/logo.png" alt="Logo">
+  <img class="navbar-brand" src="assets/images/logo.png" alt="Logo">
 
-    <ul class="navbar-links">
-      <mat-button-toggle-group 
-        class="custom-toggle-group" 
-        name="options" 
-        aria-label="Toggle Options" 
-        value="inicio"
-      >
-        <mat-button-toggle value="inicio" routerLink="/">
-          <i class="fas fa-home" style="position: relative; top: -0.2vh "></i>
-          Início
-        </mat-button-toggle>
-        <mat-button-toggle value="favoritos" routerLink="/favorites" >
-          <div class="toggle-content">
-            <i class="fas fa-heart" style="position: relative; top: 0.1vh; left: -0.1vw "></i>
-            Favoritos
-            <div class="favorite-count">
+  <div class="mobile-menu-toggle" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i> 
+  </div>
 
-                {{ favoriteCount }}
+  <ul class="navbar-links" [class.open]="menuOpen">
+    <mat-button-toggle-group 
+      class="custom-toggle-group" 
+      name="options" 
+      aria-label="Toggle Options" 
+      value="inicio"
+    >
+      <mat-button-toggle value="inicio" routerLink="/">
+        <i class="fas fa-home" style="position: relative; top: -0.2vh "></i>
+        <span class="link-text">Início</span>
+      </mat-button-toggle>
 
-            </div>
+      <mat-button-toggle value="favoritos" routerLink="/favorites">
+        <div class="toggle-content">
+          <i class="fas fa-heart" style="position: relative; top: 0.1vh; left: -0.1vw "></i>
+          <span class="link-text">Favoritos</span>
+          <div class="favorite-count">
+            {{ favoriteCount }}
           </div>
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-      
-    </ul>
+        </div>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </ul>
 </nav>
-

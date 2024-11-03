@@ -72,16 +72,18 @@
 
 @media only screen and (max-width: 768px) {
   .home-superior {
-    margin: 10vh 0 0 0;
-    display: block;
+    margin-top: 18vh;
+    display: flex;;
   }
 
   .home-title {
-    width: 4vw;
+    font-size: 2rem;
   }
 
   .character-container {
+    justify-content: center;
     width: 100%;
+    gap: 5vw;
   }
 
   .pagination-controls {

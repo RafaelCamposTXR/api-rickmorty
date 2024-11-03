@@ -21,5 +21,10 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
 }
