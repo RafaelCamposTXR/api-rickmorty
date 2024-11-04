@@ -57,11 +57,11 @@
 
 @media (max-width: 768px) {
   .search-box {
-
+    width: 40vw;
   }
   
   .search-input {
-
+    height: 5vh;
   }
   
   .search-input:focus {
@@ -69,13 +69,14 @@
   }
   
   .search-label {
-
+    padding: 0 3vw;
   }
   
   
   .search-input:focus + .search-label,
   .search-input:not(:placeholder-shown) + .search-label {
-
+    font-size: 0.95rem;
+    left: 2.1vw;
   }
   
   

@@ -16,7 +16,7 @@
 
 
   .navbar-brand {
-    height: 9.2vh;
+    height: 5.6vw;
   }
 
   .custom-toggle-group {
@@ -93,7 +93,7 @@
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    font-size: 12px; 
+    font-size: 0.9vw; 
     font-weight: bold; 
     border: 2px solid white;
   }
@@ -111,8 +111,6 @@
 
 
 @media (max-width: 768px) {
-
-
   .navbar {
     height: 7vh;
     padding: 0 3vw;
@@ -126,6 +124,7 @@
       width: 90vw; 
       height: 6vh;
       font-size: 1rem;
+      align-self: center;
     }
   
     .custom-toggle-group .mat-button-toggle {
@@ -136,6 +135,7 @@
       width: 4vw;
       height: 4vw;
       margin: 0 1vw;
+      font-size: 3vw;
     }
   }
 

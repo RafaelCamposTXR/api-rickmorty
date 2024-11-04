@@ -10,18 +10,21 @@ export class SearchBoxComponent implements OnInit {
   searchTerm: string = '';
   isFocused: boolean = false;
 
-
   @Output() searchTermChanged = new EventEmitter<string>();
+  @Output() searchTermCleared = new EventEmitter<void>(); // Evento para quando a caixa estiver vazia
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
   onSearchChange(value: string): void {
     this.searchTerm = value;
     this.searchTermChanged.emit(this.searchTerm); 
+
+    if (this.searchTerm.trim() === '') {
+      this.searchTermCleared.emit(); // Emite evento quando a caixa está vazia
+    }
   }
 
   onFocus(): void {
