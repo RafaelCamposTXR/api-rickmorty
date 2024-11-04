@@ -11,7 +11,7 @@ export class SearchBoxComponent implements OnInit {
   isFocused: boolean = false;
 
   @Output() searchTermChanged = new EventEmitter<string>();
-  @Output() searchTermCleared = new EventEmitter<void>(); // Evento para quando a caixa estiver vazia
+  @Output() searchTermCleared = new EventEmitter<void>(); 
 
   constructor() { }
 
@@ -23,7 +23,7 @@ export class SearchBoxComponent implements OnInit {
     this.searchTermChanged.emit(this.searchTerm); 
 
     if (this.searchTerm.trim() === '') {
-      this.searchTermCleared.emit(); // Emite evento quando a caixa está vazia
+      this.searchTermCleared.emit(); 
     }
   }
 

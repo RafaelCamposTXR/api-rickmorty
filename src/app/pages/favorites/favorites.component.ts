@@ -44,8 +44,4 @@ export class FavoritesComponent implements OnInit {
       console.log('Current favorites:', favorites);
     });
   }
-
-  // goToHome() {
-  //   this.router.navigate(['/']); 
-  // }
 }

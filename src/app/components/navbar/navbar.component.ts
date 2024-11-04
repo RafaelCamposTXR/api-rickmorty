@@ -25,10 +25,10 @@ export class NavbarComponent implements OnInit {
       this.favoriteCount = favorites.length;
     });
     this.router.events
-    .pipe(filter(event => event instanceof NavigationEnd)) // Filtra os eventos do tipo NavigationEnd
+    .pipe(filter(event => event instanceof NavigationEnd)) 
     .subscribe((event) => {
-      const navigationEndEvent = event as NavigationEnd; // Fazendo cast para NavigationEnd
-      this.activeRoute = navigationEndEvent.urlAfterRedirects; // Atualiza a rota ativa
+      const navigationEndEvent = event as NavigationEnd; 
+      this.activeRoute = navigationEndEvent.urlAfterRedirects; 
     });
   }
   menuOpen = false;
