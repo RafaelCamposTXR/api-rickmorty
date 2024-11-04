@@ -10,16 +10,16 @@
       class="custom-toggle-group" 
       name="options" 
       aria-label="Toggle Options" 
-      value="inicio"
+      value={{activeRoute}}
     >
-      <mat-button-toggle value="inicio" (click)="closeMenu()" routerLink="/">
-        <i class="fas fa-home" style="position: relative; top: -0.2vh "></i>
+      <mat-button-toggle [value]="'/'" (click)="closeMenu()" routerLink="/">
+        <i class="fas fa-home" style="position: relative; top: -0.2vh; left: -0.3vw "></i>
         <span class="link-text">Início</span>
       </mat-button-toggle>
 
-      <mat-button-toggle value="favoritos" (click)="closeMenu()" routerLink="/favorites">
+      <mat-button-toggle [value]="'/favorites'" (click)="closeMenu()" routerLink="/favorites">
         <div class="toggle-content">
-          <i class="fas fa-heart" style="position: relative; top: 0.1vh; left: -0.1vw "></i>
+          <i class="fas fa-heart" style="position: relative; top: 0.1vh "></i>
           <span class="link-text">Favoritos</span>
           <div class="favorite-count">
             {{ favoriteCount }}
