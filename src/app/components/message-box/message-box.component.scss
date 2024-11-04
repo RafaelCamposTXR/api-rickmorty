@@ -1,0 +1,39 @@
+.message-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 60vh;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 2vh 3vw;
+  background-color: var(--rickandmorty-black);
+  color: white;
+  gap: 0vh;
+}
+
+.message-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.message-subtitle {
+  margin: 0;
+  font-size: 0.8rem;
+  color: grey;
+  margin: 0 0 4vh 0;
+}
+
+.message-button-container {
+  border-radius: 20px;
+  color: blue;
+}
+
+@media only screen and (max-width: 768px) {
+  .message-box {
+    width: 60vw;
+  }
+}

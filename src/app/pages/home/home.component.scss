@@ -14,6 +14,18 @@
   position: relative;
 }
 
+.error-message {
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 2vh 3vw;
+  background-color: var(--rickandmorty-black)
+}
+
+
+
 
 
 .pagination-controls {
@@ -67,6 +79,8 @@
     color: var(--rickandmorty-blue);
     transition: transform 0.2s ease;
   }
+
+
 
 }
 

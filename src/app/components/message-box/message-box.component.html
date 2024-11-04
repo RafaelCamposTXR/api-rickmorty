@@ -1,0 +1,8 @@
+<div class="message-box">
+  <h2 class="message-title">{{ title }}</h2>
+  <p class="message-subtitle">{{ subtitle }}</p>
+
+  <div class="message-button-container">
+    <ng-content *ngIf="showButton" class="message-button"></ng-content> 
+  </div>  
+</div>

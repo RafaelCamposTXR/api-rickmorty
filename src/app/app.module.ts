@@ -16,7 +16,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { FormsModule } from '@angular/forms';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { CharacterService } from './services/character.service';
-import { FavoritesState } from './store/favorites.state'; 
+import { FavoritesState } from './store/favorites.state';
+import { MessageBoxComponent } from './components/message-box/message-box.component'; 
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FavoritesState } from './store/favorites.state';
     FavoritesComponent,
     SearchBoxComponent,
     CharacterCardComponent,
+    MessageBoxComponent,
   ],
   imports: [
     BrowserModule,

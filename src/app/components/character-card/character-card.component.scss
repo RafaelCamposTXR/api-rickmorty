@@ -119,6 +119,14 @@
       font-weight: 300 !important;
       margin: 0;
     }
+
+    .character-card__type {
+      height: 0.8vw;
+      font-size: 1.1vw;
+      text-align: start;
+      font-weight: 300 !important;
+      margin: 0;
+    }
   }
 }
 
@@ -163,7 +171,7 @@
 
   
       .character-card__title {
-
+        padding: 0 0 0 0.7vw;
       }
   
       .character-card__name {
@@ -172,6 +180,11 @@
   
       .character-card__subtitle {
         font-size: 0.9rem;
+      }
+
+      .character-card__type {
+        display: none;
+
       }
     }
   }

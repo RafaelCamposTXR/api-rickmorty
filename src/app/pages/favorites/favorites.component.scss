@@ -13,3 +13,40 @@
   @include creepster-title;
 }
 
+.message-button {
+  border-radius: 5px;
+  padding: 1vh 1vw;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .favorites-superior {
+    display: flex;
+    margin: 12vh 0 2vh 0;
+  }
+
+  .favorites-title {
+    font-size: 2rem;
+  }
+
+  .character-container {
+    justify-content: center;
+    width: 100%;
+    gap: 5vw;
+  }
+
+  .pagination-controls {
+
+  }
+
+  .pagination-controls button {
+
+  }
+
+  .pagination-number {
+
+  }
+}
+

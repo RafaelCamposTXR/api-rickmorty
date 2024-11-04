@@ -8,9 +8,8 @@
 </div>
 
 <!-- Exibe a mensagem de erro se houver erro -->
-<div *ngIf="errorMessage" class="error-message">
-  <p>{{ errorMessage }}</p>
-</div>
+<app-message-box *ngIf="errorMessage" title="Nada foi encontrado" subtitle="Tente realizar uma nova busca." [showButton]="false">
+</app-message-box>
 
 <!-- Exibe os personagens se não houver erro -->
 <div *ngIf="!errorMessage && characters.length > 0" class="character-container">

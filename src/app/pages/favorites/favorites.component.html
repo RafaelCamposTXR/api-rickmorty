@@ -2,15 +2,29 @@
   <div class="favorites-title"> Favoritos </div>
 </div>
 
+<!-- Verificação para ver se a lista de favoritos está vazia -->
 <div class="character-container">
-  <app-character-card 
-    *ngFor="let character of favorites$ | async" 
-    [characterId]="character.id"
-    [characterName]="character.name" 
-    [characterSubtitle]="character.species" 
-    [characterType]="character.type" 
-    [characterImage]="character.image" 
-    [isFavorite]="true"  
-    (toggleFavorite)="toggleFavorite(character.id)">
-  </app-character-card>
+  <ng-container *ngIf="(favorites$ | async) as favorites; else emptyState">
+    <div *ngIf="favorites.length > 0; else emptyState">
+      <app-character-card 
+        *ngFor="let character of favorites" 
+        [characterId]="character.id"
+        [characterName]="character.name" 
+        [characterSubtitle]="character.species" 
+        [characterType]="character.type" 
+        [characterImage]="character.image" 
+        [isFavorite]="true"  
+        (toggleFavorite)="toggleFavorite(character.id)">
+      </app-character-card>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyState>
+    <app-message-box 
+      title="Parece que você ainda não tem favoritos" 
+      subtitle="Volte à página inicial e escolha os melhores para você." 
+      [showButton]="true">
+      <button class="message-button" routerLink="/">Voltar ao Início</button>
+    </app-message-box>
+  </ng-template>
 </div>
