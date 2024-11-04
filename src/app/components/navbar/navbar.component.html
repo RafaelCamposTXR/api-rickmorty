@@ -12,12 +12,12 @@
       aria-label="Toggle Options" 
       value="inicio"
     >
-      <mat-button-toggle value="inicio" routerLink="/">
+      <mat-button-toggle value="inicio" (click)="closeMenu()" routerLink="/">
         <i class="fas fa-home" style="position: relative; top: -0.2vh "></i>
         <span class="link-text">Início</span>
       </mat-button-toggle>
 
-      <mat-button-toggle value="favoritos" routerLink="/favorites">
+      <mat-button-toggle value="favoritos" (click)="closeMenu()" routerLink="/favorites">
         <div class="toggle-content">
           <i class="fas fa-heart" style="position: relative; top: 0.1vh; left: -0.1vw "></i>
           <span class="link-text">Favoritos</span>
@@ -25,6 +25,8 @@
             {{ favoriteCount }}
           </div>
         </div>
+
+
       </mat-button-toggle>
     </mat-button-toggle-group>
   </ul>
