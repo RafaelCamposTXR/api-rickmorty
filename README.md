@@ -1,27 +1,24 @@
-# ApiRickmorty
+# Rick and Morty API Front-End
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Descrição
+Este é um aplicativo desenvolvido para explorar a API pública de Rick and Morty. O app permite que os usuários visualizem personagens, busquem por eles e adicionem seus favoritos. Ele foi construído utilizando Angular e a biblioteca NGXS para gerenciar o estado da aplicação. Foi visado o uso de diretivas estruturais, e a otimização da interface de maneira responsiva, incluindo comportamento adequado em dispositivos mobile
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Listagem de Personagens:** Os usuários podem navegar por uma lista de personagens do universo de Rick and Morty.
+- **Busca de Personagens:** É possível buscar personagens por nome, facilitando a localização de favoritos.
+- **Favoritos:** Os usuários podem adicionar ou remover personagens de sua lista de favoritos.
+- **Paginação:** A navegação entre páginas de personagens é suportada, permitindo um acesso mais fácil ao conteúdo, aproveitando do sistema integrado na api pública.
+- **Interface Responsiva:** Os estilos foram pensados para incluir comportamento em ambiente desktop e mobile, adaptando às necessidades de cada
 
-## Build
+## Disclaimer
+Eu construí a aplicação de maneira que ficasse didático a estrutura dos componentes dentro do aplicativo, e atendesse o escopo da proposta, um aplicativo de escala menor que demonstrasse o que eu já sei do framework. Por conta disso, eu não otimizei o tamanho dos bundles, não por não estar ciente da sua importância para a velocidade do site em um ambiente de deploy real, mas sim para facilitar o entendimento do app. Para separar os componentes em submódulos, eu dividiria a geração do menu de personagens, atualmente sendo feita nos componentes home e favorites, para um componente próprio, que aliviaria o peso destinado aos dois que eu mencionei.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tecnologias Utilizadas
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Frontend:** Angular
+- **Gerenciamento de Estado:** NGXS, RxJs
+- **Estilos:** SCSS
+- **API:** Rick and Morty API
